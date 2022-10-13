@@ -9,51 +9,16 @@
 // **MILESTONE 3**
 // Al click dell'utente sulle frecce, il programma cambierà l’immagine attiva, che quindi verrà visualizzata al posto della precedente.
 
-
-//inizializzo le mie variabili
-const imagesContainer = [
-    "img/01.jpg",
-    "img/02.jpg",
-    "img/03.jpg", 
-    "img/04.jpg", 
-    "img/05.jpg"
-]
-// console.log (imagesContainer);
-
-// Creo ciclo for
-for (let i = 0; i < imagesContainer.length; i++){
-    console.log(i);
-    //creo corrispondenza tra elemento [i] e le immagini
-    const thisImg = imagesContainer[i];
-    // console.log(thisImg);
-    // Inserisco le immagini nel file html
-    const element = `<div class="img_cell"><img src="${thisImg}" alt=""></div>`;
-    // collego .images_Container al file js 
-    const imagesContainerHtml = document.querySelector(".images_container");
-    console.log(imagesContainerHtml);
-    imagesContainerHtml.innerHTML += element;
-    console.log(element);
-
-    // Impostare stato iniziale slider
-    const sliderImg = document.getElementsByClassName("img_cell");
-    let activeImg = 0;
-    sliderImg[activeImg].classList.add("active");
-    console.log(sliderImg);
-
-    // Navigazione
-    const prevBtn = document.querySelector(".prev_arrow");
-    prevBtn.addEventListener("click", function () {
-        // tolgo active dall'img corrente
-        sliderImg[activeImg].classList.remove("active");
-        if(activeImg < sliderImg.length - 1) {
-        // Incremento sliderImg position
-        sliderImg++;
-    } else{
-        activeImg = 0
-    }
-    // Aggiungo active alla prossima immagine
-    sliderImg[activeImg].classList.add("active");
-    })
+// ARRAY
+const imagesArray = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg"]
+console.log(imagesArray);
+let imgList = "";
+// Inserisco immagini in modo dinamico
+for(let i = 0; i<imagesArray.length; i++){
+    let thisImg = imagesArray[i]
+    imgList += `<div class="img_cell"><img src="${"thisImg"} alt=""></div>`;
 }
 
-// Aggiungere spostamento al click
+const imgContainer =document.getElementsByClassName("images_container");
+imgContainer.innerHTML = imgList;
+console.log(imgList);

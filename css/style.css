@@ -20,6 +20,7 @@
     transform: translate(-50%,-50%);
     width: 90%;
     height: 90%;
+    display: none;
     /* RESET */
     background-color: blueviolet;    
 }
@@ -27,7 +28,7 @@
 .img_cell{
     width: 100%;
     height: 100%;
-    display: none;
+    
 }
 
 img{
@@ -40,7 +41,6 @@ img{
 .prev_arrow,.next_arrow{
     position: absolute;
     left: 50%;
-    
     transform: translatex(-50%);
     background-color: white;
     font-size: 2rem;
