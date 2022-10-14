@@ -13,12 +13,29 @@
 const imagesArray = ["img/01.jpg", "img/02.jpg", "img/03.jpg", "img/04.jpg", "img/05.jpg"]
 console.log(imagesArray);
 let imgList = "";
+let thisImg = "";
 // Inserisco immagini in modo dinamico
+// Prima le seleziono e creo i loro contenitori <div>
 for(let i = 0; i<imagesArray.length; i++){
-    let thisImg = imagesArray[i]
-    imgList += `<div class="img_cell"><img src="${"thisImg"} alt=""></div>`;
+    thisImg = imagesArray[i];
+    console.log(thisImg)
+    imgList += `<div class="img_cell"><img src="${thisImg}" alt=""></div>`;    
+    console.log(imgList);
 }
+// Poi le inserisco nel html
+const imgContainer = document.querySelector(".images_container");
+imgContainer.innerHTML += imgList;
 
-const imgContainer =document.getElementsByClassName("images_container");
-imgContainer.innerHTML = imgList;
-console.log(imgList);
+// Ora devo inserire la classe .active a ciascuna immagine per volta
+// Prima setto lo stato active sulla prima img
+
+const imgCell = document.getElementsByClassName("img_cell");
+let activeImg = 0;
+
+imgCell[activeImg].classList.add("active");
+console.log(imgCell[activeImg]);
+
+// if(imgCell < imagesArray.length){
+//     thisImg.className += (".active");
+//     console.log(thisImg);
+// }

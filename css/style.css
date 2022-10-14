@@ -1,5 +1,5 @@
 /* UTILITIES */
-.active{
+.img_cell.active{
     display: block;
 }
 
@@ -20,7 +20,7 @@
     transform: translate(-50%,-50%);
     width: 90%;
     height: 90%;
-    display: none;
+    
     /* RESET */
     background-color: blueviolet;    
 }
@@ -28,13 +28,14 @@
 .img_cell{
     width: 100%;
     height: 100%;
-    
+    display: none;
 }
 
 img{
     width:100%;
     height: 100%;
     object-fit: cover;
+
     
 }
 
