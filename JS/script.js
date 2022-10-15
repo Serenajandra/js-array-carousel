@@ -53,10 +53,6 @@ nextBtn.addEventListener("click", function(){
 
 });
 
-// Nascondo bottone quando arrivo all'ultima immagine
-    // if(activeImg = imgList.length - 1 ){
-    //     nextBtn.classList.add("btn_d-none")
-    // }
 
 const prevBtn = document.querySelector(".prev_arrow");
 prevBtn.addEventListener("click", function(){
