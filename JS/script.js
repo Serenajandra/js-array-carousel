@@ -51,10 +51,23 @@ nextBtn.addEventListener("click", function(){
      // Aggiungo active alla prossima immagine
     imgCell[activeImg].classList.add("active");
 
-    // Nascondo bottone quando arrivo all'ultima immagine
+});
+
+// Nascondo bottone quando arrivo all'ultima immagine
     // if(activeImg = imgList.length - 1 ){
     //     nextBtn.classList.add("btn_d-none")
     // }
 
-})
+const prevBtn = document.querySelector(".prev_arrow");
+prevBtn.addEventListener("click", function(){
+    imgCell[activeImg].classList.remove("active");
 
+    if(activeImg >0){
+        // Passo alla precedente img
+        activeImg--;
+    } else{
+        activeImg = imgCell.length - 1;
+    }
+
+    imgCell[activeImg].classList.add("active");
+})
