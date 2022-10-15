@@ -42,19 +42,19 @@ nextBtn.addEventListener("click", function(){
     // Tolgo active all'immagine corrente
     imgCell[activeImg].classList.remove("active");
 
-if(activeImg < imgCell.length - 1){
-    // Passo alla prossima img
-    activeImg++;
-} else{
-    activeImg = 0;
-}
- // Aggiungo active alla prossima immagine
+    if(activeImg < imgCell.length - 1){
+        // Passo alla prossima img
+        activeImg++;
+    } else{
+        activeImg = 0;
+    }
+     // Aggiungo active alla prossima immagine
     imgCell[activeImg].classList.add("active");
 
-// // Nascondo bottone quando arrivo all'ultima immagine
-// if(activeImg = imgList.length - 1 ){
-//     nextBtn.classList.add("btn_d-none")
-// }
+    // Nascondo bottone quando arrivo all'ultima immagine
+    // if(activeImg = imgList.length - 1 ){
+    //     nextBtn.classList.add("btn_d-none")
+    // }
 
 })
 
