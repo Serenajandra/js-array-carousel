@@ -35,7 +35,26 @@ let activeImg = 0;
 imgCell[activeImg].classList.add("active");
 console.log(imgCell[activeImg]);
 
-// if(imgCell < imagesArray.length){
-//     thisImg.className += (".active");
-//     console.log(thisImg);
+// // Navigazione
+
+const nextBtn = document.querySelector(".next_arrow");
+nextBtn.addEventListener("click", function(){
+    // Tolgo active all'immagine corrente
+    imgCell[activeImg].classList.remove("active");
+
+if(activeImg < imgCell.length - 1){
+    // Passo alla prossima img
+    activeImg++;
+} else{
+    activeImg = 0;
+}
+ // Aggiungo active alla prossima immagine
+    imgCell[activeImg].classList.add("active");
+
+// // Nascondo bottone quando arrivo all'ultima immagine
+// if(activeImg = imgList.length - 1 ){
+//     nextBtn.classList.add("btn_d-none")
 // }
+
+})
+

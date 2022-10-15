@@ -58,3 +58,8 @@ img{
 .prev_arrow{
     bottom:.5rem;
 }
+
+.btn_container.btn_d-none{
+    display: none;
+
+}
